@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Todo</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+    </head>
+    <body>
+        <h1>Todo</h1>
+        <div class="new"><ul></ul></div>
+        <script>
+            const electron = require("electron");
+            const { ipcRenderer } = electron;
+            const list = document.querySelector("ul");
+
+            ipcRenderer.on("newtodo", (event, todo) => {
+                const li = document.createElement("li");
+                const text = document.createTextNode(todo);
+                li.appendChild(text);
+                list.appendChild(li);
+            });
+
+            ipcRenderer.on("clear:todo", () => {
+                list.innerHTML = "";
+            });
+        </script>
+    </body>
+</html>

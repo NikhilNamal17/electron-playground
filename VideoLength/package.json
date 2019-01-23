@@ -1,0 +1,15 @@
+{
+    "name": "videolength",
+    "version": "1.0.0",
+    "description": "App to get the actual lenght of a video.",
+    "main": "index.js",
+    "scripts": {
+        "electron": "electron ."
+    },
+    "author": "Nikhil Namal",
+    "license": "ISC",
+    "dependencies": {
+        "fluent-ffmpeg": "^2.1.2",
+        "electron": "^1.8.4"
+    }
+}

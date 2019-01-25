@@ -6,6 +6,9 @@
     "scripts": {
         "electron": "electron ."
     },
+    "dependencies": {
+        "electron": "^4.0.2"
+    },
     "author": "Nikhil Namal",
     "license": "ISC"
 }
